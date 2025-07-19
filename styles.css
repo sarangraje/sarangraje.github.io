@@ -1,0 +1,226 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body with shine */
+body {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #222;
+  line-height: 1.6;
+  padding-bottom: 60px;
+  background-attachment: fixed;
+}
+
+/* Header + Nav */
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.2rem;
+}
+
+nav h1 {
+  color: #800000;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007acc;
+}
+
+/* Hero Section (Center of Page) */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  background-attachment: fixed;
+  color: #222;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-content .highlight {
+  color: #800000;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Section layout */
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+section h2 {
+  color: #007acc;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+/* Glass-effect Cards */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #800000;
+  margin-bottom: 0.5rem;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+  margin-top: 0.5rem;
+}
+
+.card p, .card li {
+  color: #333;
+}
+
+/* Skills List */
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skills li {
+  list-style: none;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.skills li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #007acc;
+}
+
+/* Contact Links */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.5);
+  color: #555;
+  font-size: 0.9rem;
+  backdrop-filter: blur(6px);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 0.8rem;
+  }
+}
+
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.resume-button:hover {
+  background-color: #003d80;
+}
